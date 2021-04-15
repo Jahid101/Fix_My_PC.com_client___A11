@@ -1,0 +1,14 @@
+.cardInfo img{
+    height: 200px;
+    width: 200px;
+}
+.cardInfo{
+    width: 300px;
+    border-radius: 15px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    background-color: white;
+    box-shadow: 1px 10px 40px 10px tomato;
+}
