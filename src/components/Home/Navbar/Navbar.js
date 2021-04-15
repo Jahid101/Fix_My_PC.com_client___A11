@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../App';
+import { UserContext } from '../../../App';
 import firebase from "firebase/app";
 import "firebase/auth";
 
@@ -27,9 +27,9 @@ const Navbar = () => {
     }
 
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <Link class="navbar-brand" to="/"><h3><strong>PC Bazar.com</strong></h3></Link>
+                <Link class="navbar-brand" to="/"><h3><strong>Computer Service Center</strong></h3></Link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

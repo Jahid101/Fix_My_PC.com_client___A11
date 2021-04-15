@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 
-const Home = () => {
+const BuyProducts = () => {
 
     const [products, setProducts] = useState([]);
 
@@ -29,4 +29,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default BuyProducts;

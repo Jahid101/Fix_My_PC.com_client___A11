@@ -1,0 +1,6 @@
+.headerBg{
+    background-image: url('../../../images/HeaderBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}

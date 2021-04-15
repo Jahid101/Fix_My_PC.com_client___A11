@@ -1,6 +1,5 @@
 import './App.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Error from './Components/Error/Error';
 import {
@@ -8,7 +7,6 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Navbar from './Components/Navbar/Navbar';
 import Register from './Components/Register/Register';
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
@@ -19,6 +17,8 @@ import ManageProduct from './Components/ManageProduct/ManageProduct';
 import OrderPreview from './Components/OrderPreview/OrderPreview';
 import Thank from './Components/Thank/Thank';
 import SelectProduct from './Components/SelectProduct/SelectProduct';
+import Homepage from './Components/Home/Homepage/Homepage';
+import Navbar from './Components/Home/Navbar/Navbar';
 
 
 export const UserContext = createContext();
@@ -31,13 +31,13 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         <Switch>
           <Route exact path="/">
-            <Home></Home>
+            <Homepage></Homepage>
           </Route>
           <Route path="/home">
-            <Home></Home>
+          <Homepage></Homepage>
           </Route>
           <Route path="/login">
             <Login></Login>
