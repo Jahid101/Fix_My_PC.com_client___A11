@@ -1,0 +1,23 @@
+.fixerCardInfo img{
+    height: 300px;
+    width: 250px;
+}
+
+.fixerCardInfo{
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 70px;
+    margin-bottom: 70px;
+    background-color: white;
+    box-shadow: 1px 10px 40px 10px green;
+}
+
+.fixerBg{
+    background-color: yellowgreen;
+    height: 720px;
+    /* border: 1px solid red; */
+    padding-top: 50px;
+}

@@ -4,12 +4,14 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <div className="row container headerBg">
-            <div className="col-md-6">
-                <h1>hola</h1>
-            </div>
-            <div className="col-md-6">
-                <h1>hi</h1>
+        <div className="row mt-5 headerContainer headerBg">
+            <div className="col-md-6 headerLeft">
+                <h1 style={{fontSize:'60px'}} >BEST COMPUTER <br/>SERVICING CENTER</h1>
+                <br/>
+                <h3 style={{fontSize:'30px'}}>Fastest Diagnosis and Provide <br/>Solutions Within A Day !</h3>
+                <br/>
+                <button className="btn btn-info mr-5">Learn More</button>
+                <button className="btn btn-success">Our Products</button>
             </div>
         </div>
     );

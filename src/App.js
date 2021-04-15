@@ -19,6 +19,8 @@ import Thank from './Components/Thank/Thank';
 import SelectProduct from './Components/SelectProduct/SelectProduct';
 import Homepage from './Components/Home/Homepage/Homepage';
 import Navbar from './Components/Home/Navbar/Navbar';
+import BuyProducts from './Components/BuyProducts/BuyProducts';
+
 
 
 export const UserContext = createContext();
@@ -31,13 +33,16 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-        {/* <Navbar></Navbar> */}
+        <Navbar></Navbar>
         <Switch>
           <Route exact path="/">
             <Homepage></Homepage>
           </Route>
           <Route path="/home">
-          <Homepage></Homepage>
+            <Homepage></Homepage>
+          </Route>
+          <Route path="/buyProducts">
+            <BuyProducts></BuyProducts>
           </Route>
           <Route path="/login">
             <Login></Login>
