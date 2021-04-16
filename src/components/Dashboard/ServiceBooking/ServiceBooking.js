@@ -7,8 +7,10 @@ import PaymentProcess from '../Payment/PaymentProcess';
 const ServiceBooking = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    // const [shippingData, setShippingData] = useState(null);
+    const [paymentPhone, setPaymentPhone] = useState(null);
+    const [paymentAddress, setPaymentAddress] = useState(null);
     const [service, setService] = useState({});
+    const [isInfoGiven, setIsInfoGiven] = useState(false);
 
     const { id } = useParams();
 
@@ -18,28 +20,46 @@ const ServiceBooking = () => {
             .then(data => setService(data))
     }, [id])
 
+    const handlePaymentPhone = e => {
+        setPaymentPhone(e.target.value);
+    }
+
+    const handlePaymentAddress = e => {
+        setPaymentAddress(e.target.value);
+    }
+
+    const handleClick = (e) => {
+        if (paymentPhone && paymentAddress) {
+            setIsInfoGiven(true);
+        }
+        e.preventDefault();
+    }
+
 
     const handlePayment = paymentId => {
-        // const bookingDetails = {
-            // name: loggedInUser.name,
-            // // email: loggedInUser.email,
-            // paymentId,
-            // orderTime: new Date()
-        // };
+        const bookingDetails = {
+            name: loggedInUser.displayName,
+            email: loggedInUser.email,
+            Address: paymentAddress,
+            phone: paymentPhone,
+            service: service.name,
+            paymentId,
+            orderTime: new Date()
+        };
 
-        // fetch('http://localhost:9999/addOrder', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(bookingDetails)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         if (data) {
-        //             alert('Your order placed successfully')
-        //         }
-        //     })
+        fetch('http://localhost:9999/addOrder', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(bookingDetails)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    alert('Your Order placed successfully')
+                }
+            })
     }
 
     return (
@@ -59,16 +79,24 @@ const ServiceBooking = () => {
                     <br />
 
                     <h5>Service Name</h5>
-                    <input type="text" class="form-control w-50" value={service.name} name="description" aria-label="Last name" required />
+                    <input type="text" class="form-control w-50" value={service.name} name="serviceName" aria-label="Last name" required />
                     <br />
 
-                    <h5>Phone</h5>
-                    <input type="number" class="form-control w-50" placeholder="Your Phone" name="description" aria-label="Last name" required />
+                    <h5>Your Address *</h5>
+                    <input type="text" onBlur={handlePaymentAddress} class="form-control w-50" placeholder="Address" name="description" aria-label="Last name" required />
+                    <br />
+
+                    <h5>Your Phone *</h5>
+                    <input type="number" onBlur={handlePaymentPhone} class="form-control w-50" placeholder="Your Phone" name="phone" aria-label="Last name" required />
+
+                    <br />
+                    <input onClick={handleClick} className="btn btn-info mb-3" type="submit" value="Go for Payment" />
                 </form>
-                <div>
-                    <h3>Payment</h3>
+                {isInfoGiven && <div>
+                    <h3 className="mt-4 mb-4">Payment</h3>
                     <PaymentProcess handlePayment={handlePayment}></PaymentProcess>
                 </div>
+                }
             </div>
         </div>
     );

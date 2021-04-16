@@ -9,7 +9,6 @@ const PaymentProcess = ({handlePayment}) => {
     return (
         <Elements stripe={stripePromise}>
                 <PaymentCard handlePayment = {handlePayment}></PaymentCard>
-                {/* <SplitCardForm></SplitCardForm> */}
         </Elements>
     );
 };
