@@ -9,80 +9,72 @@ import { UserContext } from '../../../App';
 const Sidebar = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [isAdmin, setIsAdmin] = useState([]);
-    const [admin, setAdmin] = useState(false);
+    const [checkAdmin, setCheckAdmin] = useState(false);
 
 
     useEffect(() => {
-        fetch('http://localhost:9999/admin')
+        fetch('http://localhost:9999/checkAdmin', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ email: loggedInUser.email })
+        })
             .then(res => res.json())
-            .then(data => {
-                data.map(admin => setIsAdmin(admin))
-            })
-    }, [])
+            .then(data => setCheckAdmin(data));
+    }, [loggedInUser.email])
 
-
-    // console.log(isAdmin.email);
-
-    // if (loggedInUser.email === isAdmin.email) {
-    //     setAdmin(true);
-    // }
-    // else {
-    //     setAdmin(false);
-    // }
-    // console.log(admin);
+    console.log(checkAdmin);
 
 
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
 
-                {/* {!isAdmin && <div> */}
-                <li>
-                    <Link to="/serviceBooking" className="text-white">
-                        <FontAwesomeIcon icon={faShoppingCart} /> <span>
-                            Service Booking
+                {!checkAdmin && <div>
+                    <li>
+                        <Link to="/serviceBooking" className="text-white">
+                            <FontAwesomeIcon icon={faShoppingCart} /> <span>
+                                Service Booking
                             </span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/serviceList" className="text-white">
-                        <FontAwesomeIcon icon={faList} /> <span>
-                            Service list
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/serviceList" className="text-white">
+                            <FontAwesomeIcon icon={faList} /> <span>
+                                Service list
                             </span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/feedback" className="text-white">
-                        <FontAwesomeIcon icon={faCommentDots} /> <span>Feedback</span>
-                    </Link>
-                </li>
-                {/* </div>
-                } */}
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/feedback" className="text-white">
+                            <FontAwesomeIcon icon={faCommentDots} /> <span>Feedback</span>
+                        </Link>
+                    </li>
+                </div>
+                }
 
-                {/* {isAdmin && <div> */}
-                <li>
-                    <Link to="/orderList" className="text-white">
-                        <FontAwesomeIcon icon={faListAlt} /> <span>Order list</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/addService" className="text-white" >
-                        <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/addAdmin" className="text-white" >
-                        <FontAwesomeIcon icon={faUserPlus} /> <span>Add Admin</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/manageService" className="text-white">
-                        <FontAwesomeIcon icon={faTasks} /> <span>Manage Service</span>
-                    </Link>
-                </li>
-                {/* </div>
-                } */}
+                {checkAdmin && <div>
+                    <li>
+                        <Link to="/orderList" className="text-white">
+                            <FontAwesomeIcon icon={faListAlt} /> <span>Order list</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/addService" className="text-white" >
+                            <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/addAdmin" className="text-white" >
+                            <FontAwesomeIcon icon={faUserPlus} /> <span>Add Admin</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/manageService" className="text-white">
+                            <FontAwesomeIcon icon={faTasks} /> <span>Manage Service</span>
+                        </Link>
+                    </li>
+                </div>
+                }
 
             </ul>
         </div>

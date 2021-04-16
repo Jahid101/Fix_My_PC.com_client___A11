@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <div className="row mt-5 headerContainer headerBg">
+        <div className="row mt-4 headerContainer headerBg">
             <div className="col-md-6 headerLeft">
                 <h1 style={{fontSize:'60px'}} >BEST COMPUTER <br/>SERVICING CENTER</h1>
                 <br/>
