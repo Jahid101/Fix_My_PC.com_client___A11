@@ -1,28 +1,17 @@
 import React from 'react';
 import './testimonialCard.css';
 
-const TestimonialCard = () => {
+const TestimonialCard = (props) => {
+
+    const {name, email, description} = props.testimonial;
+
     return (
         <div>
             <div class="row container testimonialCardInfo mt-5 p-3 btn">
                 <div>
-                    <h3 className="text-center mt-4">Dalwer Noob</h3>
-                    <h6 className=" mt-4">dalwernoob@gmail.com</h6>
-                    <p className=" mt-5">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, voluptate"</p>
-                </div>
-            </div>
-            <div class="row container testimonialCardInfo mt-5 p-3 btn">
-                <div>
-                    <h3 className="text-center mt-4">Dalwer Noob</h3>
-                    <h6 className=" mt-4">dalwernoob@gmail.com</h6>
-                    <p className=" mt-5">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, voluptate"</p>
-                </div>
-            </div>
-            <div class="row container testimonialCardInfo mt-5 p-3 btn">
-                <div>
-                    <h3 className="text-center mt-4">Dalwer Noob</h3>
-                    <h6 className=" mt-4">dalwernoob@gmail.com</h6>
-                    <p className=" mt-5">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, voluptate"</p>
+                    <h3 className="text-center mt-4">{name}</h3>
+                    <h6 className="mt-4">{email}</h6>
+                    <p className="mt-5">"{description}"</p>
                 </div>
             </div>
         </div>

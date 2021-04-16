@@ -48,7 +48,7 @@ const Feedback = () => {
                 <br />
                 <form onSubmit={handleFeedbackSubmit}>
                     <h5>Name</h5>
-                    <input type="text" class="form-control w-50" placeholder="Your Name" name="name" value={loggedInUser.displayName} aria-label="First name" required />
+                    <input type="text" class="form-control w-50" name="name" placeholder={loggedInUser.displayName} aria-label="First name" required />
                     <br />
 
                     <h5>Email</h5>
