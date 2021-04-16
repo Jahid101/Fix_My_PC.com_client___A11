@@ -28,6 +28,7 @@ import AddService from './Components/Dashboard/AddService/AddService';
 import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
 import OrderList from './Components/Dashboard/OrderList/OrderList';
 import ManageService from './Components/Dashboard/ManageService/ManageService';
+import SelectService from './Components/Dashboard/SelectService/SelectService';
 
 
 
@@ -52,9 +53,6 @@ function App() {
           <PrivateRoute path="/dashboard">
             <Dashboardpage></Dashboardpage>
           </PrivateRoute>
-          <PrivateRoute path="/serviceBooking">
-            <ServiceBooking></ServiceBooking>
-          </PrivateRoute>
           <PrivateRoute path="/serviceList">
             <ServiceList></ServiceList>
           </PrivateRoute>
@@ -73,6 +71,12 @@ function App() {
           <PrivateRoute path="/manageService">
             <ManageService></ManageService>
           </PrivateRoute>
+          <PrivateRoute path="/serviceBooking/:id">
+            <ServiceBooking></ServiceBooking>
+          </PrivateRoute>
+          <PrivateRoute path="/serviceBooking">
+            <SelectService></SelectService>
+          </PrivateRoute>
           <Route path="/buyProducts">
             <BuyProducts></BuyProducts>
           </Route>
@@ -82,6 +86,7 @@ function App() {
           <Route path="/register">
             <Register></Register>
           </Route>
+          
           <PrivateRoute path="/orders/:id">
             <Orders></Orders>
           </PrivateRoute>

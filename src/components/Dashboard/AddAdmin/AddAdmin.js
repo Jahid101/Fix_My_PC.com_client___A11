@@ -10,7 +10,7 @@ const AddAdmin = () => {
 
         console.log(newAdminInfo);
 
-        const url = `http://localhost:7777/addAdmin`;
+        const url = `http://localhost:9999/addAdmin`;
         fetch(url, {
             method: 'POST',
             headers: {

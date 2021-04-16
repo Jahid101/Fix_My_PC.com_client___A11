@@ -2,9 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faSignOutAlt, faCalendar, faHome, faGripHorizontal, faUserPlus, faUsers, faCommentDots, faShoppingCart, faList, faPlus, faTasks, faListAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus, faCommentDots, faShoppingCart, faList, faPlus, faTasks, faListAlt } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../../../App';
-
 
 
 const Sidebar = () => {
@@ -15,29 +14,23 @@ const Sidebar = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:7777/admin')
+        fetch('http://localhost:9999/admin')
             .then(res => res.json())
             .then(data => {
                 data.map(admin => setIsAdmin(admin))
             })
     }, [])
 
+
     // console.log(isAdmin.email);
 
-    // useEffect(() => {
-
-            // if (loggedInUser.email === isAdmin.email) {
-            //     setAdmin(true);
-            // }
-            // else {
-            //     setAdmin(false);
-            // }
-            // console.log(admin);
-
-    // }, [loggedInUser.email])
-
-
-
+    // if (loggedInUser.email === isAdmin.email) {
+    //     setAdmin(true);
+    // }
+    // else {
+    //     setAdmin(false);
+    // }
+    // console.log(admin);
 
 
     return (

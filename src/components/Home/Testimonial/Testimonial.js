@@ -6,7 +6,7 @@ const Testimonial = () => {
     const [testimonial, setTestimonial] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:7777/feedback')
+        fetch('http://localhost:9999/feedback')
             .then(res => res.json())
             .then(data => setTestimonial(data))
     }, [])

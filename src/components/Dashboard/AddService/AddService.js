@@ -17,7 +17,7 @@ const AddService = () => {
         };
 
 
-        const url = `http://localhost:7777/addService`;
+        const url = `http://localhost:9999/addService`;
         fetch(url, {
             method: 'POST',
             headers: {

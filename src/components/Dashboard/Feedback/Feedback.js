@@ -18,7 +18,7 @@ const Feedback = () => {
 
         console.log(feedbackInfo);
 
-        const url = `http://localhost:7777/addFeedback`;
+        const url = `http://localhost:9999/addFeedback`;
         fetch(url, {
             method: 'POST',
             headers: {
