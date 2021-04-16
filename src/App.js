@@ -20,6 +20,14 @@ import SelectProduct from './Components/SelectProduct/SelectProduct';
 import Homepage from './Components/Home/Homepage/Homepage';
 import Navbar from './Components/Home/Navbar/Navbar';
 import BuyProducts from './Components/BuyProducts/BuyProducts';
+import Dashboardpage from './Components/Dashboard/Dashboardpage/Dashboardpage';
+import ServiceBooking from './Components/Dashboard/ServiceBooking/ServiceBooking';
+import ServiceList from './Components/Dashboard/ServiceList/ServiceList';
+import Feedback from './Components/Dashboard/Feedback/Feedback';
+import AddService from './Components/Dashboard/AddService/AddService';
+import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
+import OrderList from './Components/Dashboard/OrderList/OrderList';
+import ManageService from './Components/Dashboard/ManageService/ManageService';
 
 
 
@@ -41,6 +49,30 @@ function App() {
           <Route path="/home">
             <Homepage></Homepage>
           </Route>
+          <PrivateRoute path="/dashboard">
+            <Dashboardpage></Dashboardpage>
+          </PrivateRoute>
+          <PrivateRoute path="/serviceBooking">
+            <ServiceBooking></ServiceBooking>
+          </PrivateRoute>
+          <PrivateRoute path="/serviceList">
+            <ServiceList></ServiceList>
+          </PrivateRoute>
+          <PrivateRoute path="/feedback">
+            <Feedback></Feedback>
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
+            <AddService></AddService>
+          </PrivateRoute>
+          <PrivateRoute path="/addAdmin">
+            <AddAdmin></AddAdmin>
+          </PrivateRoute>
+          <PrivateRoute path="/orderList">
+            <OrderList></OrderList>
+          </PrivateRoute>
+          <PrivateRoute path="/manageService">
+            <ManageService></ManageService>
+          </PrivateRoute>
           <Route path="/buyProducts">
             <BuyProducts></BuyProducts>
           </Route>
