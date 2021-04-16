@@ -20,7 +20,7 @@ const BuyProducts = () => {
     return (
         <div className="container">
             {
-                products.length ? "" : <img style={spinnerStyle} src="https://gifimage.net/wp-content/uploads/2017/11/fidget-spinner-gif-transparent-8.gif" alt=""/>
+                products.length ? "" : <img style={spinnerStyle} src="https://miro.medium.com/max/1600/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt=""/>
             }
             {
                 products.map(product => <Card product = {product} ></Card>)
