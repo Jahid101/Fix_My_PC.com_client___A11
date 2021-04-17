@@ -43,6 +43,7 @@ const ServiceBooking = () => {
             Address: paymentAddress,
             phone: paymentPhone,
             service: service.name,
+            status: 'Pending',
             paymentId,
             orderTime: new Date()
         };

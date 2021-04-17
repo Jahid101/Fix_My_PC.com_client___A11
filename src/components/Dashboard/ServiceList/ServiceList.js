@@ -21,22 +21,30 @@ const ServiceList = () => {
 
             <div className="mt-3" style={{ marginLeft: '300px' }}>
                 <h2 className="ml-5 mb-5">Total Booked Service : {service.length}</h2>
-                <h4 className="mb-4 form-control text-light bg-info w-75">
-                    <strong>
-                        <span className="ml-4 mb-5">Service Name</span>
-                        <span style={{ marginLeft: '85px' }}>Booking Time</span>
-                        <span style={{ marginLeft: '180px' }}>Order Status</span>
-                    </strong>
-                </h4>
-                {
-                    service.map(service =>
-                        <div className="d-flex rounded shadow-lg mb-3 w-75">
-                            <h6 className="m-5">{service.service}</h6>
-                            <h6 className="m-5">{service.orderTime}</h6>
-                            <button className="btn btn-primary m-5">Pending...</button>
-                        </div>
-                    )
-                }
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Service</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    {
+                        service.map(service =>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">{service.name}</th>
+                                    <td>{service.orderTime}</td>
+                                    <td>{service.service}</td>
+                                    <td>
+                                        <button  className="btn btn-primary m-2"><strong>{service.status}</strong></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        )
+                    }
+                </table>
             </div>
         </div>
     );

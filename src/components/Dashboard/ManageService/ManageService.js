@@ -46,7 +46,6 @@ const ManageService = () => {
                             <h5 className="m-5">{service.name}</h5>
                             <h5 className="m-3">{service.serviceDetails}</h5>
                             <img  className="mb-3 mt-3" style={{ width: '100px', height:'100px' }} src={service.imageURL} alt="" />
-                            {/* <button className="btn btn-primary m-5">Edit</button> */}
                             <button onClick={() => handleDelete(service._id)} className="btn btn-danger m-5">Delete</button>
                         </div>
                     )
