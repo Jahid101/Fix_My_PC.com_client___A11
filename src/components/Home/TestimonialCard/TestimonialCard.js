@@ -6,7 +6,7 @@ const TestimonialCard = (props) => {
     const {name, email, description} = props.testimonial;
 
     return (
-        <div>
+        <div className="cardDesign">
             <div class="row container testimonialCardInfo mt-5 p-3 btn">
                 <div>
                     <h3 className="text-center mt-4">{name}</h3>

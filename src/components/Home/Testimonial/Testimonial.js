@@ -14,7 +14,7 @@ const Testimonial = () => {
     return (
         <div>
             <div className="mt-5 testimonialBg ">
-                <h1 className="text-center mb-3">Testimonials</h1>
+                <h1 className="text-center mb-3" style={{color: 'black', fontSize:'50px'}}>Testimonials</h1>
                 <div className="">
                     {
                         testimonial.map(testimonial => <TestimonialCard testimonial={testimonial}></TestimonialCard>)

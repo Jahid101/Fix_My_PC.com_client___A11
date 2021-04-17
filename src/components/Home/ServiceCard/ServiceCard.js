@@ -12,7 +12,7 @@ const ServiceCard = (props) => {
     }
 
     return (
-        <div onClick={handleCardClick} class="row container cardInfo mt-5 p-3 btn">
+        <div onClick={handleCardClick} class="row container cardDesign ServiceCardInfo mt-5 p-3 btn">
             <div>
                 <img src={imageURL} alt="" />
                 <div>

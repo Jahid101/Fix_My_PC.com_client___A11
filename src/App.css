@@ -17,6 +17,20 @@
   box-shadow: 1px 10px 40px 10px tomato;
 }
 
+.cardDesign{
+  transition: 0.5s ;
+}
+.cardDesign:hover{
+  transform: scale(0.9);
+}
+
+img {
+  transition: 0.5s ;
+}
+img:hover {
+  transform: scale(1.1);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
