@@ -1,11 +1,11 @@
 .fixerCardInfo img{
-    height: 420px;
+    height: 320px;
     width: 300px;
 }
 
 .fixerCardInfo{
     width: 350px;
-    height: 600px;
+    height: 500px;
     border-radius: 15px;
     float: left;
     margin-top: 50px;
@@ -20,7 +20,7 @@
     background-image: url('https://direcycle.org/wp-content/uploads/2018/08/iStock-625135580.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 820px;
+    height: 720px;
     /* border: 1px solid red; */
     padding-top: 50px;
 }

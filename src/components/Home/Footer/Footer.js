@@ -13,7 +13,8 @@ const Footer = () => {
     const services = [
         {name: "Display Repair" },
         {name: "HDD Repair" },
-        {name: "RAM Update"}
+        {name: "RAM Update"},
+        {name: "Graphics Card Repair"}
     ]
     return (
         <footer className="footer-area clear-both">
