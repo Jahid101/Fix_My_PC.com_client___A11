@@ -16,7 +16,9 @@
   background-color: white;
   box-shadow: 1px 10px 40px 10px tomato;
 }
-
+body{
+  overflow-x: hidden;
+}
 .cardDesign{
   transition: 0.5s ;
 }
