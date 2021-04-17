@@ -13,7 +13,7 @@ const Services = () => {
     }, [])
 
     return (
-        <div className="mt-5 serviceBg">
+        <div className="mt-5 serviceBg" id="service">
             <div className="container">
                 <h1 className="text-center mb-3" style={{color: 'white', fontSize:'50px'}}> <strong>OUR SERVICES</strong> </h1>
                 <div className="">

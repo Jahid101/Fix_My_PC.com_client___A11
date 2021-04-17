@@ -108,7 +108,7 @@ const OrderList = () => {
                         order.map(order =>
                             <tbody>
                                 <tr>
-                                    <th scope="row">{order.name}</th>
+                                    <th scope="row">{order.name || order.email}</th>
                                     <td>{order.email}</td>
                                     <td>{order.service}</td>
                                     <td><strong>{order.status}</strong></td>

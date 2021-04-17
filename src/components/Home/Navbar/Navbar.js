@@ -35,24 +35,12 @@ const Navbar = () => {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item mr-3">
                             <Link class="nav-link active text-light" aria-current="page" to="/home">Home</Link>
                         </li>
                         <li class="nav-item mr-3">
-                            <Link class="nav-link active text-light" aria-current="page" to="/buyProducts">Buy Products</Link>
-                        </li>
-                        <li class="nav-item mr-3">
                             <Link class="nav-link active text-light" aria-current="page" to="/dashboard">Dashboard</Link>
-                        </li>
-                        <li class="nav-item active mr-3">
-                            <Link class="nav-link active text-light" to="/orders">Orders</Link>
-                        </li>
-                        <li class="nav-item active mr-3">
-                            <Link class="nav-link active text-light" to="/orderPreview">Order Preview</Link>
-                        </li>
-                        <li class="nav-item active mr-3">
-                            <Link class="nav-link active text-light" to="/admin">Admin</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link active text-light" to="/register">

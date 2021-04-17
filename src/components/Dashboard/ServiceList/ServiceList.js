@@ -34,7 +34,7 @@ const ServiceList = () => {
                         service.map(service =>
                             <tbody>
                                 <tr>
-                                    <th scope="row">{service.name}</th>
+                                    <th scope="row">{service.name || service.email} </th>
                                     <td>{service.orderTime}</td>
                                     <td>{service.service}</td>
                                     <td>
