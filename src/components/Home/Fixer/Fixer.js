@@ -22,7 +22,7 @@ const Fixer = () => {
     return (
         <div>
             <div className="mt-5 fixerBg">
-                <h1 className="text-center mb-3 text-light" style={{ color: 'black', fontSize: '55px' }}>REPAIR EXPERTS</h1>
+                <h1 className="text-center mb-3 text-light" style={{ color: 'black', fontSize: '55px' }}>OUR EXPERTS</h1>
                 <div className="row">
                     {
                         experts.map(expert => <FixerCard  expert ={ expert }></FixerCard>)

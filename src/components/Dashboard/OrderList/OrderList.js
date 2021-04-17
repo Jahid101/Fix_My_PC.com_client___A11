@@ -92,7 +92,7 @@ const OrderList = () => {
         <div>
             <Dashboardpage></Dashboardpage>
 
-            <div className="mt-3" style={{ marginLeft: '300px' }}>
+            <div className="mt-3" style={{ marginLeft: '250px' }}>
                 <h2 className="ml-5 mb-5">Total Ordered List : {order.length}</h2>
                 <table class="table">
                     <thead>

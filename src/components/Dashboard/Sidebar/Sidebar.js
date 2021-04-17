@@ -27,30 +27,7 @@ const Sidebar = () => {
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
 
-                {!checkAdmin && <div>
-                    <li>
-                        <Link to="/serviceBooking" className="text-white">
-                            <FontAwesomeIcon icon={faShoppingCart} /> <span>
-                                Service Booking
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/serviceList" className="text-white">
-                            <FontAwesomeIcon icon={faList} /> <span>
-                                Service list
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/feedback" className="text-white">
-                            <FontAwesomeIcon icon={faCommentDots} /> <span>Feedback</span>
-                        </Link>
-                    </li>
-                </div>
-                }
-
-                {checkAdmin && <div>
+                {checkAdmin ? <div>
                     <li>
                         <Link to="/orderList" className="text-white">
                             <FontAwesomeIcon icon={faListAlt} /> <span>Order list</span>
@@ -72,6 +49,28 @@ const Sidebar = () => {
                         </Link>
                     </li>
                 </div>
+                    :
+                    <div>
+                        <li>
+                            <Link to="/serviceBooking" className="text-white">
+                                <FontAwesomeIcon icon={faShoppingCart} /> <span>
+                                    Service Booking
+                            </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/serviceList" className="text-white">
+                                <FontAwesomeIcon icon={faList} /> <span>
+                                    Service list
+                            </span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/feedback" className="text-white">
+                                <FontAwesomeIcon icon={faCommentDots} /> <span>Feedback</span>
+                            </Link>
+                        </li>
+                    </div>
                 }
 
             </ul>

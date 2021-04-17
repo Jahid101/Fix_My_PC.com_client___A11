@@ -2,6 +2,7 @@
     background-image: url('https://i.pinimg.com/originals/f9/29/5f/f9295f31785ddf24b9b2a7c2c9935d5a.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding-top: 50px;
 }
 
