@@ -10,16 +10,8 @@ import {
 import Register from './Components/Register/Register';
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import Orders from './Components/Orders/Orders';
-import Admin from './Components/Admin/Admin';
-import AddProduct from './Components/AddProduct/AddProduct';
-import ManageProduct from './Components/ManageProduct/ManageProduct';
-import OrderPreview from './Components/OrderPreview/OrderPreview';
-import Thank from './Components/Thank/Thank';
-import SelectProduct from './Components/SelectProduct/SelectProduct';
 import Homepage from './Components/Home/Homepage/Homepage';
 import Navbar from './Components/Home/Navbar/Navbar';
-import BuyProducts from './Components/BuyProducts/BuyProducts';
 import Dashboardpage from './Components/Dashboard/Dashboardpage/Dashboardpage';
 import ServiceBooking from './Components/Dashboard/ServiceBooking/ServiceBooking';
 import ServiceList from './Components/Dashboard/ServiceList/ServiceList';
@@ -77,40 +69,12 @@ function App() {
           <PrivateRoute path="/serviceBooking">
             <SelectService></SelectService>
           </PrivateRoute>
-          <Route path="/buyProducts">
-            <BuyProducts></BuyProducts>
-          </Route>
           <Route path="/login">
             <Login></Login>
           </Route>
           <Route path="/register">
             <Register></Register>
           </Route>
-          
-          <PrivateRoute path="/orders/:id">
-            <Orders></Orders>
-          </PrivateRoute>
-          {/* <PrivateRoute path="/orders">
-            <Orders></Orders>
-          </PrivateRoute> */}
-          <PrivateRoute path="/admin">
-            <Admin></Admin>
-          </PrivateRoute>
-          <PrivateRoute path="/addProduct">
-            <AddProduct></AddProduct>
-          </PrivateRoute>
-          <PrivateRoute path="/manageProduct">
-            <ManageProduct></ManageProduct>
-          </PrivateRoute>
-          <PrivateRoute path="/orderPreview">
-            <OrderPreview></OrderPreview>
-          </PrivateRoute>
-          <PrivateRoute path="/thank">
-            <Thank></Thank>
-          </PrivateRoute>
-          <PrivateRoute path="/orders">
-            <SelectProduct></SelectProduct>
-          </PrivateRoute>
           <Route path="*">
             <Error></Error>
           </Route>

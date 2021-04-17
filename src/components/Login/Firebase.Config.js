@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBWUKIzl0coeypBHk9uO73VW3LbG5RBWEU",
-  authDomain: "pc-bazar-com.firebaseapp.com",
-  projectId: "pc-bazar-com",
-  storageBucket: "pc-bazar-com.appspot.com",
-  messagingSenderId: "1098929573663",
-  appId: "1:1098929573663:web:f52a39dda4f3d10f6daa2a"
+  apiKey: "AIzaSyCk0-Po5CZaSxG63W3IOXSy4TwY6S15p4c",
+  authDomain: "fixmypc-d0f4e.firebaseapp.com",
+  projectId: "fixmypc-d0f4e",
+  storageBucket: "fixmypc-d0f4e.appspot.com",
+  messagingSenderId: "336690038827",
+  appId: "1:336690038827:web:b683f44ac1d674ea01026e"
 };
 
 export default firebaseConfig;
