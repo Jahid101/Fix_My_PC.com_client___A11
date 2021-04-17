@@ -1,10 +1,7 @@
 .serviceBg{
-    /* background-color: wheat; */
     background-image: url('https://i.pinimg.com/originals/f9/29/5f/f9295f31785ddf24b9b2a7c2c9935d5a.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 620px;
-    /* border: 1px solid red; */
     padding-top: 50px;
 }
 
@@ -19,8 +16,7 @@
     float: left;
     margin-top: 15px;
     margin-left: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     background-color: white;
     box-shadow: 1px 10px 40px 10px ;
 }
-

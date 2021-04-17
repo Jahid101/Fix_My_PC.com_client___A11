@@ -22,7 +22,7 @@ const Product = () => {
     return (
         <div className="mt-5 productBg" id="product">
             <h1 className="text-center mb-3 text-light" style={{ color: 'black', fontSize: '55px' }}>Checkout Our Products</h1>
-            <div className="">
+            <div className="row">
                 {
                     products.map(product => <ProductCard product={product}></ProductCard>)
                 }

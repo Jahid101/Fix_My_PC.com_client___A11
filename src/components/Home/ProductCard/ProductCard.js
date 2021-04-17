@@ -3,7 +3,7 @@ import '../Product/Product.css';
 
 const ProductCard = ({product}) => {
     return (
-        <div class="row container productCardInfo cardDesign mt-5 p-3 btn">
+        <div class="col-md-3 row container productCardInfo cardDesign mt-5 p-3 btn">
             <div>
                 <img src={product.img} alt="" />
                 <div>
