@@ -16,9 +16,6 @@ const Header = () => {
                 <a href="#product">
                     <button className="btn btn-success">Our Products</button>
                 </a>
-                <a href="#footer">
-                    <button className="btn btn-info m-5">Find us</button>
-                </a>
             </div>
         </div>
     );

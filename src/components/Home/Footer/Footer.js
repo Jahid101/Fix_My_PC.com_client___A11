@@ -17,7 +17,7 @@ const Footer = () => {
         {name: "Graphics Card Repair"}
     ]
     return (
-        <footer className="footer-area clear-both" id="footer">
+        <footer className="footer-area clear-both">
             <div className="container pt-5">
                 <div className="row py-5">
                     <FooterCol key={2} menuTitle="Services" menuItems={services}/>
