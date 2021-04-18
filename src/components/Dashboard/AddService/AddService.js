@@ -81,7 +81,7 @@ const AddService = () => {
                     <br />
                     <input className="btn btn-success mb-3" type="submit" value="Submit" />
                     {
-                        <span style={{ color: 'green' }}> {dbStatus ? "Product added successfully." : ""}</span>
+                        <span style={{ color: 'green' }}> {dbStatus ? "Service added successfully." : ""}</span>
                     }
                 </form>
             </div>
