@@ -6,7 +6,7 @@ const Testimonial = () => {
     const [testimonial, setTestimonial] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:9999/feedback')
+        fetch('http://morning-brushlands-06822.herokuapp.com/feedback')
             .then(res => res.json())
             .then(data => setTestimonial(data))
     }, [])
