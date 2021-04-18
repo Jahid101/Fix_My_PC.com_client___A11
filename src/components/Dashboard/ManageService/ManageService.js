@@ -6,14 +6,14 @@ const ManageService = () => {
     const [service, setService] = useState([]);
 
     useEffect(() => {
-        fetch('http://morning-brushlands-06822.herokuapp.com/service')
+        fetch('https://morning-brushlands-06822.herokuapp.com/service')
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
 
 
     const deleted = () => {
-        fetch('http://morning-brushlands-06822.herokuapp.com/service')
+        fetch('https://morning-brushlands-06822.herokuapp.com/service')
             .then(res => res.json())
             .then(data => setService(data))
     }
@@ -21,7 +21,7 @@ const ManageService = () => {
 
     const handleDelete = (id) => {
 
-        fetch(`http://morning-brushlands-06822.herokuapp.com/deleteService/${id}`, {
+        fetch(`https://morning-brushlands-06822.herokuapp.com/deleteService/${id}`, {
             method : "DELETE"
         })
         .then(res => res.json())

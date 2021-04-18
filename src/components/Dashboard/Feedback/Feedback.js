@@ -18,7 +18,7 @@ const Feedback = () => {
 
         console.log(feedbackInfo);
 
-        const url = `http://morning-brushlands-06822.herokuapp.com/addFeedback`;
+        const url = `https://morning-brushlands-06822.herokuapp.com/addFeedback`;
         fetch(url, {
             method: 'POST',
             headers: {

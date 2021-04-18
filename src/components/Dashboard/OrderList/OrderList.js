@@ -6,14 +6,14 @@ const OrderList = () => {
     const [order, setOrder] = useState([]);
 
     useEffect(() => {
-        fetch('http://morning-brushlands-06822.herokuapp.com/orderList')
+        fetch('https://morning-brushlands-06822.herokuapp.com/orderList')
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [])
 
 
     const statusUpdated = () => {
-        fetch('http://morning-brushlands-06822.herokuapp.com/orderList')
+        fetch('https://morning-brushlands-06822.herokuapp.com/orderList')
             .then(res => res.json())
             .then(data => setOrder(data))
     }
@@ -24,7 +24,7 @@ const OrderList = () => {
         const status = 'Pending'
         const user = { id, status };
 
-        const url = `http://morning-brushlands-06822.herokuapp.com/updateOrderList/${id}`;
+        const url = `https://morning-brushlands-06822.herokuapp.com/updateOrderList/${id}`;
         fetch(url, {
             method: 'PATCH',
             headers: {
@@ -47,7 +47,7 @@ const OrderList = () => {
         const status = 'On going'
         const user = { id, status };
 
-        const url = `http://morning-brushlands-06822.herokuapp.com/updateOrderList/${id}`;
+        const url = `https://morning-brushlands-06822.herokuapp.com/updateOrderList/${id}`;
         fetch(url, {
             method: 'PATCH',
             headers: {
@@ -70,7 +70,7 @@ const OrderList = () => {
         const status = 'Done'
         const user = { id, status };
 
-        const url = `http://morning-brushlands-06822.herokuapp.com/updateOrderList/${id}`;
+        const url = `https://morning-brushlands-06822.herokuapp.com/updateOrderList/${id}`;
         fetch(url, {
             method: 'PATCH',
             headers: {
